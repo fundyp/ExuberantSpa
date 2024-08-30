@@ -1,0 +1,32 @@
+.header {
+    background-color: #d9e7ef;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: #4d51a3;
+    display: inline;
+    margin: 0 3%;
+    /*font-weight: bold;*/
+  }
+  .logo{
+    width: 190px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  .header-divider {
+    width: 94%; /* Set the width of the divider */
+    height: 2px; /* Thickness of the divider */
+    background-color: #c8e0e8; /* Off-white color */
+    margin-top: 20px; 
+    margin-bottom: 20px; /* Space between the divider and the nav */
+    margin-right: auto;
+    margin-left: auto;
+  }
