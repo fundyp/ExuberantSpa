@@ -4,7 +4,7 @@ import './header.css';  // Import the corresponding CSS file
 function Header() {
   return (
     <header className="header">
-      <img src="/exuberantlogo.png" alt="Exuberant Beauty Spa" className="logo"/>
+      <img src="/Exuberantlogo.png" alt="Exuberant Beauty Spa" className="logo"/>
       <div className="header-divider"></div>
       <nav className="nav-container">
         <h2 className="nav-header">Exuberant</h2>
