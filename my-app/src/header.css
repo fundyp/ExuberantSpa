@@ -1,32 +1,191 @@
 .header {
     background-color: #d9e7ef;
-    padding: 20px;
+    padding: 1%;
     color: white;
+    flex-direction: column; 
     text-align: center;
   }
   
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0px auto;
+    box-sizing: border-box;
+    overflow: visible;
+    
+  }
+
   .nav-list {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    scroll-behavior: smooth; /* Optional: smooth scrolling behavior */
+    touch-action: pan-x; /* Ensure touch devices can scroll horizontally */
   }
   
   .nav-item {
     color: #4d51a3;
     display: inline;
-    margin: 0 3%;
-    /*font-weight: bold;*/
-  }
-  .logo{
-    width: 190px; /* Adjust the size of the logo */
-    height: auto; /* Maintain the aspect ratio */
+    margin: 0 30px;
+    font-size: .95rem; /* Default size, you can adjust this */
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
+  /* Add the white bar on hover */
+.nav-item::after {
+  content: ""; /* No text, just a bar */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 3px; /* Adjust the height of the bar */
+  background-color: #F3F9fd; /* White bar color */
+  transform: scaleX(0); /* Start with the bar hidden */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* On hover, expand the bar */
+.nav-item:hover::after {
+  transform: scaleX(1.4); /* Show the bar */
+}
+  
+  .nav-header {
+    color: #4d51a3;
+    font-size: .95rem;
+    margin-right: 30px; /* Space between the h2 and the nav items */
+    margin-left: 30px; /* Space between the h2 and the
+    white-space: nowrap; /* Prevents the h2 from wrapping */
+    /*flex-shrink: 0; /* Prevents the h2 from shrinking */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+  }
+  
+  .logo {
+    width: 145px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 1%;
+  }
+  
   .header-divider {
-    width: 94%; /* Set the width of the divider */
-    height: 2px; /* Thickness of the divider */
-    background-color: #c8e0e8; /* Off-white color */
-    margin-top: 20px; 
-    margin-bottom: 20px; /* Space between the divider and the nav */
+    width: 100%; 
+    height: 2px; 
+    background-color: #c8e0e8; 
+    /*margin-top: 1%; 
+    margin-bottom: 1%; */
     margin-right: auto;
     margin-left: auto;
+  }
+  
+
+
+  @media (max-width: 680px) {
+    .nav-container {
+      overflow-x: auto; /* Allows horizontal scrolling for smaller screens */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    .nav-list {
+        overflow-x: auto; /* Allows horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on touch devices */
+      }
+  
+    .nav-list::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera: Hides scrollbar */
+    }
+
+    .nav-item {
+        margin: 0 8px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-header {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+  }
+
+  @media (min-width: 680px) and (max-width: 880px) {
+    .nav-item {
+        margin: 0 15px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-header {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+  }
+  
+  @media (min-width: 881px) and (max-width: 1000px) {
+    .nav-item {
+        margin: 0 24px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-header {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+  }
+
+  /* standard right now is 1080px */
+
+
+
+  /* for 1440p devices */
+  @media (min-width: 1240px) and (max-width: 1800px) {
+    .logo {
+        width: 170px; /* Adjust the size of the logo */
+        height: auto;
+    }
+
+    .nav-item {
+        margin: 0 38px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-header {
+        margin-right: 38px;
+        margin-left: 38px;
+        height: 1.15rem;
+    }
+
+    .nav-item {
+        height: 1.15rem;
+    }
+  }
+
+  /* for 4k devices */
+  @media (min-width: 1881px) {
+    .logo {
+        width: 200px; /* Adjust the size of the logo */
+        height: auto;
+    }
+
+    .nav-item {
+        margin: 0 45px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-header {
+        margin-right: 45px;
+        margin-left: 45px;
+        height: 1.25rem;
+    }
+
+    .nav-item {
+        height: 1.25rem;
+    }
   }
