@@ -4,9 +4,9 @@
     color: white;
     flex-direction: column; 
     text-align: center;
-  }
-  
-  .nav-container {
+}
+
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,22 +15,21 @@
     margin: 0px auto;
     box-sizing: border-box;
     overflow: visible;
-    
-  }
+}
 
-  .nav-list {
+.nav-list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 6px;
     display: flex;
     white-space: nowrap; /* Prevent wrapping */
     overflow-x: auto; /* Enable horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
     scroll-behavior: smooth; /* Optional: smooth scrolling behavior */
     touch-action: pan-x; /* Ensure touch devices can scroll horizontally */
-  }
-  
-  .nav-item {
+}
+
+.nav-item {
     color: #4d51a3;
     display: inline;
     margin: 0 30px;
@@ -39,88 +38,102 @@
     cursor: pointer;
     padding-bottom: 10px;
     padding-top: 10px;
-  }
+    font-size: 14px;
+}
 
-  /* Add the white bar on hover */
+/* Add the white bar on hover */
 .nav-item::after {
-  content: ""; /* No text, just a bar */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 3px; /* Adjust the height of the bar */
-  background-color: #F3F9fd; /* White bar color */
-  transform: scaleX(0); /* Start with the bar hidden */
-  transform-origin: center;
-  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    content: ""; /* No text, just a bar */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 3px; /* Adjust the height of the bar */
+    background-color: #F3F9fd; /* White bar color */
+    transform: scaleX(0); /* Start with the bar hidden */
+    transform-origin: center;
+    transition: transform 0.5s ease-in, transform 0.15s ease-out; /* Separate easing for in and out */
 }
 
 /* On hover, expand the bar */
 .nav-item:hover::after {
-  transform: scaleX(1.4); /* Show the bar */
+    transform: scaleX(1.3); /* Show the bar */
+    transition: transform 0.5s ease-in; /* Slower ease-in when hovering */
 }
-  
-  .nav-header {
+
+/* Active tab indicator */
+.nav-item.active::after {
+    transform: scaleX(1.3); /* Keep the bar visible */
+    transition: transform 0.5s ease-in; /* Same slow ease-in for active state */
+}
+
+/* When the active class is removed, shrink the bar faster */
+.nav-item:not(.active):after {
+    transition: transform 0.15s ease-out; /* Faster shrink when removing active class */
+}
+
+
+.nav-header {
     color: #4d51a3;
     font-size: .95rem;
     margin-right: 30px; /* Space between the h2 and the nav items */
-    margin-left: 30px; /* Space between the h2 and the
+    margin-left: 30px; /* Space between the h2 and the */
     white-space: nowrap; /* Prevents the h2 from wrapping */
-    /*flex-shrink: 0; /* Prevents the h2 from shrinking */
     margin-top: 2px;
     margin-bottom: 2px;
-    
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 145px; /* Adjust the size of the logo */
     height: auto; /* Maintain the aspect ratio */
     margin-bottom: 1%;
-  }
-  
-  .header-divider {
+}
+
+.header-divider {
     width: 100%; 
     height: 2px; 
     background-color: #c8e0e8; 
-    /*margin-top: 1%; 
-    margin-bottom: 1%; */
     margin-right: auto;
     margin-left: auto;
-  }
-  
+}
 
+.logo2 {
+    width: 44px;
+    height: auto; 
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 
-  @media (max-width: 680px) {
+@media (max-width: 680px) {
     .nav-container {
-      overflow-x: auto; /* Allows horizontal scrolling for smaller screens */
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        overflow-x: auto; /* Allows horizontal scrolling for smaller screens */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     
     .nav-list {
         overflow-x: auto; /* Allows horizontal scrolling */
         -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on touch devices */
-      }
+    }
   
     .nav-list::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera: Hides scrollbar */
+        display: none; /* Chrome, Safari, Opera: Hides scrollbar */
     }
 
     .nav-item {
         margin: 0 8px; /* Adjust the spacing between nav items */
+        height: 2.2rem;
     }
 
     .nav-header {
         margin-right: 8px;
         margin-left: 8px;
+        height: 2.2rem;
     }
+}
 
-    .logo {
-        width: 120px;
-        height: auto;
-    }
-  }
-
-  @media (min-width: 680px) and (max-width: 880px) {
+@media (min-width: 680px) and (max-width: 880px) {
     .nav-item {
         margin: 0 15px; /* Adjust the spacing between nav items */
     }
@@ -129,9 +142,14 @@
         margin-right: 15px;
         margin-left: 15px;
     }
-  }
-  
-  @media (min-width: 881px) and (max-width: 1000px) {
+
+    .logo2 {
+        margin-right: 22px;
+        margin-left: 28px;
+    }
+}
+
+@media (min-width: 881px) and (max-width: 1000px) {
     .nav-item {
         margin: 0 24px; /* Adjust the spacing between nav items */
     }
@@ -140,21 +158,23 @@
         margin-right: 24px;
         margin-left: 24px;
     }
-  }
 
-  /* standard right now is 1080px */
+    .logo2 {
+        margin-right: 28px;
+        margin-left: 38px;
+    }
+}
 
-
-
-  /* for 1440p devices */
-  @media (min-width: 1240px) and (max-width: 1800px) {
+/* For 1440p devices */
+@media (min-width: 1240px) and (max-width: 1800px) {
     .logo {
-        width: 170px; /* Adjust the size of the logo */
+        width: 160px; /* Adjust the size of the logo */
         height: auto;
     }
 
     .nav-item {
         margin: 0 38px; /* Adjust the spacing between nav items */
+        font-size: 15px;
     }
 
     .nav-header {
@@ -163,13 +183,18 @@
         height: 1.15rem;
     }
 
-    .nav-item {
-        height: 1.15rem;
+    .logo2 {
+        width: 46px;
+        height: auto; 
+        margin-right: 45px;
+        margin-left: 45px;
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
-  }
+}
 
-  /* for 4k devices */
-  @media (min-width: 1881px) {
+/* For 4k devices */
+@media (min-width: 1881px) {
     .logo {
         width: 200px; /* Adjust the size of the logo */
         height: auto;
@@ -188,4 +213,4 @@
     .nav-item {
         height: 1.25rem;
     }
-  }
+}
