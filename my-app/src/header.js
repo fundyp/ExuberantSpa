@@ -4,8 +4,15 @@ import './header.css';  // Import the corresponding CSS file
 function Header() {
   const [activeTab, setActiveTab] = useState('home');
 
-  const handleScroll = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+  const handleScroll = (section, offset = 0) => {
+    const element = document.getElementById(section);
+    const top = element.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth',
+    });
+
     setActiveTab(section);
   };
 
@@ -25,13 +32,13 @@ function Header() {
           </li>
           <li 
             className={`nav-item ${activeTab === 'about' ? 'active' : ''}`}
-            onClick={() => handleScroll('about')}
+            onClick={() => handleScroll('about', 200)} // Adjust the offset for "About Us"
           >
             About Us
           </li>
           <li 
             className={`nav-item ${activeTab === 'services' ? 'active' : ''}`}
-            onClick={() => handleScroll('services')}
+            onClick={() => handleScroll('services', 350)} // Adjust the offset for "Services"
           >
             Services
           </li>

@@ -1,7 +1,7 @@
 /* Home.css */
 
 .intro-video {
-    width: 94%; /* Make the video take up the full width */
+    width: 96%; /* Make the video take up the full width */
     max-height: 80vh; /* Optional: Set a maximum height */
     object-fit: cover; /* Ensure the video covers the space nicely */
     display: block; /* Ensure it's a block element */
