@@ -6,7 +6,7 @@
     object-fit: cover; /* Ensure the video covers the space nicely */
     display: block; /* Ensure it's a block element */
     margin-top: 40px; /* Remove any margin */
-    margin-bottom: 20px; /* Add spacing below the video if needed */
+    margin-bottom: 120px; /* Add spacing below the video if needed */
   }
   
   #home {
@@ -16,4 +16,13 @@
     flex-direction: column; /* Stack content vertically */
   }
   
-  
+  .about-divider {
+    height: 4px;
+    width: 98%;
+    background-color: #00aeef;
+  }
+
+  .about-container {
+    height: 900px;
+    background-color: #f7f9fa;
+  }

@@ -32,13 +32,13 @@ function Header() {
           </li>
           <li 
             className={`nav-item ${activeTab === 'about' ? 'active' : ''}`}
-            onClick={() => handleScroll('about', 200)} // Adjust the offset for "About Us"
+            onClick={() => handleScroll('about', 0)} // Adjust the offset for "About Us"
           >
             About Us
           </li>
           <li 
             className={`nav-item ${activeTab === 'services' ? 'active' : ''}`}
-            onClick={() => handleScroll('services', 350)} // Adjust the offset for "Services"
+            onClick={() => handleScroll('services', 0)} // Adjust the offset for "Services"
           >
             Services
           </li>

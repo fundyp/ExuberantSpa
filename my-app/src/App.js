@@ -14,15 +14,7 @@ function App() {
       <section id="services">
         {/* Services content */}
       </section>
-      <section id="gallery">
-        {/* Gallery content */}
-      </section>
-      <section id="contact">
-        {/* Contact Us content */}
-      </section>
-      <section id="reviews">
-        {/* Reviews content */}
-      </section>
+      
     </div>
   );
 }
