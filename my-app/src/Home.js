@@ -16,7 +16,7 @@ function Home() {
       
       <div className="welcome-slogan">
         <h2 >WELCOME</h2>
-        <h1>Elevate Your Beauty, Transform Your Body.</h1>
+        <h1>Elevate Your Beauty, Revitalize Your Body.</h1>
         <p> Experience rejuvenation from head to toe with our advanced treatments at Exuberant.</p>
         
       </div>
@@ -33,8 +33,11 @@ function Home() {
       </section>
 
       <section id="services">
+        <div className="services-container">
+          <h2>Services :D</h2>
 
-        <h2>Services :D</h2>
+        </div>
+        
       </section>
     </div>
     

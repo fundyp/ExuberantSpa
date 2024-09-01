@@ -11,8 +11,8 @@ body {
     max-height: 80vh; /* Optional: Set a maximum height */
     object-fit: cover; /* Ensure the video covers the space nicely */
     display: block; /* Ensure it's a block element */
-    margin-top: 10px; /* Remove any margin */
-    margin-bottom: 80px; /* Add spacing below the video if needed */
+    margin-top: 0px; /* Remove any margin */
+    margin-bottom: 60px; /* Add spacing below the video if needed */
   }
   
   #home {
@@ -35,10 +35,16 @@ h2 {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 40px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 28px;
+  margin-bottom: 6px;
 }
 p{
   font-size: 20px;
@@ -79,4 +85,13 @@ p{
   font-family: "Baskervville SC", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.services-container {
+  height: 800px; /* Adjust height as needed */
+  background-color: #e8f6f9; /* Section background color */
+  margin: 10px 0; /* Center the container horizontally and add vertical spacing */
+  width: 100%; /* Adjust width to allow for gaps on both sides */
+  border-radius: 16px; /* Optional: Rounded corners for the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
