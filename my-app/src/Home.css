@@ -1,0 +1,19 @@
+/* Home.css */
+
+.intro-video {
+    width: 100%; /* Make the video take up the full width */
+    max-height: 80vh; /* Optional: Set a maximum height */
+    object-fit: cover; /* Ensure the video covers the space nicely */
+    display: block; /* Ensure it's a block element */
+    margin-top: 40px; /* Remove any margin */
+    margin-bottom: 20px; /* Add spacing below the video if needed */
+  }
+  
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  
