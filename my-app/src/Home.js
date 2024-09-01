@@ -6,7 +6,7 @@ function Home() {
     <section id="home">
       <video 
         className="intro-video" 
-        src="/Exuberantintro-3.mp4" 
+        src="/ExuberantIntro-3.mp4" 
         autoPlay 
         loop 
         muted 
