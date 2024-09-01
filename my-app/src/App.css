@@ -26,13 +26,13 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #e2ebed;
 }
 
 body, html {
-  background-color: #d9e7ef;
+  background-color: #c8e0e8;
   margin: 0;
-  height: 150%;
+ 
 }
 
 @keyframes App-logo-spin {

@@ -13,14 +13,18 @@ function Home() {
         muted 
         playsInline
       />
-      {/* Add any additional content for the home section here */}
+      
+      <div className="welcome-slogan">
+        <h2 >WELCOME</h2>
+        <h1>Elevate Your Beauty, Transform Your Body.</h1>
+        <p> Experience rejuvenation from head to toe with our advanced treatments at Exuberant.</p>
+        
+      </div>
     </section>
 
       <section id="about">
 
-        <div className="about-divider">
-          
-        </div>
+      
         <div className="about-container">
 
           <h2>About Us :D</h2>
