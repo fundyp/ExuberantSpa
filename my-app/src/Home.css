@@ -73,7 +73,7 @@ p{
 
 .about-container {
   height: 800px; /* Adjust height as needed */
-  background-color: #afd7e3; /* Section background color */
+  background-color: #c9dee8; /* Section background color */
   margin: 10px 0; /* Center the container horizontally and add vertical spacing */
   width: 100%; /* Adjust width to allow for gaps on both sides */
   border-radius: 16px; /* Optional: Rounded corners for the container */
@@ -89,7 +89,7 @@ p{
 
 .services-container {
   height: 800px; /* Adjust height as needed */
-  background-color: #e8f6f9; /* Section background color */
+  background-color: #edf4f7; /* Section background color */
   margin: 10px 0; /* Center the container horizontally and add vertical spacing */
   width: 100%; /* Adjust width to allow for gaps on both sides */
   border-radius: 16px; /* Optional: Rounded corners for the container */
