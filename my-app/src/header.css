@@ -29,6 +29,8 @@
     box-sizing: border-box;
     overflow: visible;
 
+    
+
 }
 
 .nav-container-temp2 {
@@ -45,6 +47,7 @@
     margin: 0px auto;
     box-sizing: border-box;
     overflow: visible;
+    
 }
 .nav-list {
     list-style: none;
@@ -132,15 +135,16 @@
     height: auto;
     margin-top: 12px;
     margin-bottom: 12px;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 .header-divider {
     width: 100%; 
     height: 2px; 
-    background-color: #c8e0e8; 
+    background-color: #bcd7db; 
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 0px;
 }
 
 .logo2 {
@@ -197,6 +201,7 @@
 }
 
 .new-button:hover {
-    background: #c4d6df;
+    background: #4d51a3;
     text-decoration: none;
+    color: white;
   }

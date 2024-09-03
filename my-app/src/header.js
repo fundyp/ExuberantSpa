@@ -31,7 +31,7 @@ function Header() {
         <ul className="nav-list">
             <li 
               className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
-              onClick={() => handleScroll('home')}
+              onClick={() => handleScroll('home', -35)}
             >
               HOME
             </li>
